@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas </title>
+    <link rel="icon" href="https://web.fdje.org/assets/images/template/fundacion.ico" type="image/x-icon">
+   <link rel="stylesheet" href="css/nivel2.css">
+    
+</head>
+
+<body>
+    <h1><strong>Rompecabezas </strong> </h1>
+    <hr>
+    <br>
+     <a href="../juego-memorama-/home.html">Juegos Disponilbles
+    </a>
+    <br><br>
+   
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <p style="font-weight:bold ;">Bienvenido al nivel 2 :</p>
+            - Desplaza cada pieza al lugar correspondiente y completa las zonas de aplicacion de la insulina
+            <br>
+                    </div>
+    </div>
+
+
+    <div class="container">
+        <div id="puzzle"></div>
+        <div id="piezas"></div>
+    </div>
+    <h1 id="mensaje">!Felicidades lo haz Logrado !</h1>
+    <br>
+    <a id="mensaje" href="index.html" target="_blank">Aceptar</a>
+    <script>
+        const imagenes = [
+            'imagen-0', 'imagen-1', 'imagen-2',
+            'imagen-3', 'imagen-4', 'imagen-5',
+            'imagen-6', 'imagen-7', 'imagen-8'
+        ];
+
+        const puzzle = document.getElementById('puzzle');
+        const piezas = document.getElementById('piezas');
+        const mensaje = document.getElementById('mensaje');
+
+        let terminado = imagenes.length;
+
+        while (imagenes.length) {
+            const index = Math.floor(Math.random() * imagenes.length);
+            const div = document.createElement('div');
+            div.className = 'pieza';
+            div.id = imagenes[index];
+            div.draggable = true;
+            div.style.backgroundImage = `url("recursos2/${imagenes[index]}.jpg")`;
+            piezas.appendChild(div);
+            imagenes.splice(index, 1);
+        }
+
+        for (let i = 0; i < terminado; i++) {
+            const div = document.createElement('div');
+            div.className = 'placeholder';
+            div.dataset.id = i;
+            puzzle.appendChild(div);
+        }
+
+
+        piezas.addEventListener('dragstart', e => {
+            e.dataTransfer.setData('id', e.target.id);
+        });
+
+        puzzle.addEventListener('dragover', e => {
+            e.preventDefault();
+            e.target.classList.add('hover');
+        });
+
+        puzzle.addEventListener('dragleave', e => {
+            e.target.classList.remove('hover');
+        });
+
+        puzzle.addEventListener('drop', e => {
+            e.target.classList.remove('hover');
+
+            const id = e.dataTransfer.getData('id');
+            const numero = id.split('-')[1];
+
+            if (e.target.dataset.id === numero) {
+                e.target.appendChild(document.getElementById(id));
+
+                terminado--;
+
+                if (terminado === 0) {
+                    document.body.classList.add('ganaste');
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

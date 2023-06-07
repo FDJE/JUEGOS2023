@@ -1,0 +1,52 @@
+
+img.card-img-top {
+    object-fit: cover;
+    cursor: pointer;
+    max-height: 300px !important;
+    max-width: 200px !important;
+    border-radius: 20px;
+}
+.p,p{
+    font-size: 1.10rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.h5,h5{
+    font-size: 1.80rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+h1{
+    color: rgb(8, 10, 11);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    }
+    .col-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+h6{
+    color: rgb(0, 0, 0);
+}
+span{
+    color: rgb(1, 1, 1);
+}
+img.card-img-top.girar {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+body {
+  /*Para la barra inferior fija*/
+  padding-bottom: 70px;
+  background-size: cover;
+  background-image: url(https://th.bing.com/th/id/R.6ce207bef5e3b5427cf8836da5b1cb46?rik=Yzjh5XQX8V3G%2bw&pid=ImgRaw&r=0);
+}

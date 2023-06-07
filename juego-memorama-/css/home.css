@@ -1,0 +1,173 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+body {
+    /*Para la barra inferior fija*/
+    padding-bottom: 30px;
+    background-size: cover;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/WarpFactor4.gif);
+  }
+  .contenedor{
+    /* position: relative; left: 10px;  */
+    margin:auto;
+
+  }
+  h1{
+    color: hsla(0, 0%, 0%, .9);
+    font: normal 40px Varela Round, sans-serif;
+    height: 30px;
+    left: 0;
+    letter-spacing: 5px;
+    margin: -80px 0 0 0;
+    position:initial;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    width: 100%;
+    animation: move linear 2000ms infinite;  
+  }
+  
+  @keyframes move {
+    0% {
+      text-shadow:
+        4px -4px 0 hsla(0, 100%, 50%, 1), 
+        3px -3px 0 hsla(0, 100%, 50%, 1), 
+        2px -2px 0 hsla(0, 100%, 50%, 1), 
+        1px -1px 0 hsla(0, 100%, 50%, 1),
+        -4px 4px 0 hsla(180, 100%, 50%, 1), 
+        -3px 3px 0 hsla(180, 100%, 50%, 1), 
+        -2px 2px 0 hsla(180, 100%, 50%, 1), 
+        -1px 1px 0 hsla(180, 100%, 50%, 1)
+      ;
+    }
+    25% {    
+      text-shadow:      
+        -4px -4px 0 hsla(180, 100%, 50%, 1), 
+        -3px -3px 0 hsla(180, 100%, 50%, 1), 
+        -2px -2px 0 hsla(180, 100%, 50%, 1), 
+        -1px -1px 0 hsla(180, 100%, 50%, 1),
+        4px 4px 0 hsla(0, 100%, 50%, 1), 
+        3px 3px 0 hsla(0, 100%, 50%, 1), 
+        2px 2px 0 hsla(0, 100%, 50%, 1), 
+        1px 1px 0 hsla(0, 100%, 50%, 1)      
+      ;
+    }
+    50% {
+      text-shadow:
+        -4px 4px 0 hsla(0, 100%, 50%, 1), 
+        -3px 3px 0 hsla(0, 100%, 50%, 1), 
+        -2px 2px 0 hsla(0, 100%, 50%, 1), 
+        -1px 1px 0 hsla(0, 100%, 50%, 1),
+        4px -4px 0 hsla(180, 100%, 50%, 1), 
+        3px -3px 0 hsla(180, 100%, 50%, 1), 
+        2px -2px 0 hsla(180, 100%, 50%, 1), 
+        1px -1px 0 hsla(180, 100%, 50%, 1)
+      ;
+    }
+    75% {
+      text-shadow:
+        4px 4px 0 hsla(180, 100%, 50%, 1), 
+        3px 3px 0 hsla(180, 100%, 50%, 1), 
+        2px 2px 0 hsla(180, 100%, 50%, 1), 
+        1px 1px 0 hsla(180, 100%, 50%, 1),
+        -4px -4px 0 hsla(0, 100%, 50%, 1), 
+        -3px -3px 0 hsla(0, 100%, 50%, 1), 
+        -2px -2px 0 hsla(0, 100%, 50%, 1), 
+        -1px -1px 0 hsla(0, 100%, 50%, 1)      
+      ;
+    }
+    100% {
+      text-shadow:
+        4px -4px 0 hsla(0, 100%, 50%, 1), 
+        3px -3px 0 hsla(0, 100%, 50%, 1), 
+        2px -2px 0 hsla(0, 100%, 50%, 1), 
+        1px -1px 0 hsla(0, 100%, 50%, 1),
+        -4px 4px 0 hsla(180, 100%, 50%, 1), 
+        -3px 3px 0 hsla(180, 100%, 50%, 1), 
+        -2px 2px 0 hsla(180, 100%, 50%, 1), 
+        -1px 1px 0 hsla(180, 100%, 50%, 1)
+      ;
+    }  
+  }
+
+  #container div img {
+    width: 400%;
+    height: 400%;
+    box-shadow: 0 0 10px rgb(8, 197, 235);
+    border: 5px solid rgb(247, 247, 247);
+    border-radius: 20px;
+}
+
+  section{
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+}
+
+#container:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+#container{
+    width: 90%;
+    margin:0 auto;
+}
+
+#container div{
+    width: 28%;
+    height: auto;
+    -webkit-transition: -webkit-transform 1s;
+    display:inline;
+    float:left;
+    margin:0px 3% 0 0;
+padding: 0;
+}
+#container div img{
+    width: 100%;
+    height: 275px;
+    box-shadow: 0 0 10px rgb(220, 169, 102);
+    border: 8px solid #FFF
+}
+
+#container div img ~ span{
+    width: 100%;
+    display:block;
+    opacity:0;
+    -webkit-transition: opacity 1s;
+    margin: 0;
+    padding:2px 5px;
+    color:#FFF;
+    background:rgba(0, 0, 0, 0.7);
+box-shadow: 0 0 10px #666;
+    text-align:center;
+    border-radius: 2px;
+}
+
+#container div img:hover + span{
+    opacity:1;
+}
+
+#container:hover div{
+opacity: 0.2;
+-webkit-transform: scale(0.5);
+-ms-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+#container:hover div:hover{
+opacity: 1;
+-webkit-transform: scale(1);
+-ms-transform: scale(1);
+transform: scale(1);
+}
+
+@media (min-width:1600px){
+    #container div{
+        width: 15%;
+    }
+}
+.btn{
+  width: 95%;
+}
+

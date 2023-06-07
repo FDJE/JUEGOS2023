@@ -1,0 +1,119 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+body {
+  background-image: url("img/space3.jpg");
+  background-size: 1365px;
+    font-size: 40px;
+    
+}
+
+#header{
+    background-color: white;
+    border: solid 1px  #30237a;
+    margin: auto;
+    width: 78%;
+    color: #333333;
+    padding: 1%;
+    display: flex;
+    justify-content:space-around;
+    }
+
+
+#tablero{
+  background-image: url("img/space3.jpg");
+display: flex;
+justify-content: center;
+align-items: center;
+flex-flow: row wrap;
+margin: auto;
+width: 100%;
+
+
+}
+
+
+
+.carta img {
+    width: 100%;
+    height: 105%;
+
+}
+
+
+.espacio_carta {
+    width: 18vw;
+    height: 18vw;
+    perspective: 600px;
+    margin: 0.5%;
+    padding: 0.7%;
+  }
+
+  .carta {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    text-align: center;
+
+  }
+
+  .lado {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    padding: 10%;
+    backface-visibility: hidden;
+    border-radius: 25px;
+  }
+
+  .cerrado {
+    background: #f3edb7;
+    background-image: url("img/logo1.png");
+    background-size: 50% 50%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  .abierto {
+    background: #E9E9E9;
+    transition: 5s;
+    transform: rotateY( 180deg );
+  }
+
+  .abierto p {
+      color: gray;
+     
+
+  }
+
+  .carta.girada {
+    transform: rotateY(180deg);
+  }
+
+  button {
+      background-color: #3ab454;
+      color: white;
+      font-size: 0.7em;
+      padding: 2%;
+      border-radius: 5%;
+  }
+
+  #dificultad {
+      background: rgb(99, 64, 194);
+      font-size: 0.7em;
+      color: white;
+  }
+  
+  #reiniciar {
+    display: none;
+  background-color: #5d93c5e7;
+  }
+
+
+
+  
