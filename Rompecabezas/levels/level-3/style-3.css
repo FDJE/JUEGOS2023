@@ -7,7 +7,7 @@ body {
   padding-top: 1%;
 }
 .tile {
-  background-image: url("/Rompecabezas/img/level-3.png");
+  background-image: url("/img/level-3.png");
   width: 85px;
   height: 85px;
   float: left;
