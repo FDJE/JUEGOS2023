@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rompecabezas</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        margin-top: 50px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        width: 100%;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+
+      #timer {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rompecabezas</h1>
+      <div class="d-flex justify-content-between">
+        <p id="mensaje-bienvenida"></p>
+        <button id="cambiar-jugador" class="btn btn-primary">
+          Cambiar de jugador
+        </button>
+      </div>
+      <div class="row p-4">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="levels/level-1/level-1.html">
+            <div class="card">
+              <img class="card-img-top" src="img/level-1.png" alt="Imagen 1" />
+              <div class="card-body">
+                <h5 class="card-title">Nivel 1</h5>
+              </div>
+            </div>
+          </a>
+          <div class="mt-2" id="score-1"></div>
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="levels/level-2/level-2.html">
+            <div class="card">
+              <img class="card-img-top" src="img/level-2.png" alt="Imagen 2" />
+              <div class="card-body">
+                <h5 class="card-title">Nivel 2</h5>
+              </div>
+            </div>
+          </a>
+          <div class="mt-2" id="score-2"></div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="levels/level-3/level-3.html">
+            <div class="card">
+              <img class="card-img-top" src="img/level-3.png" alt="Imagen 3" />
+              <div class="card-body">
+                <h5 class="card-title">Nivel 3</h5>
+              </div>
+            </div>
+          </a>
+          <div class="mt-2" id="score-3"></div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <a href="levels/level-4/level-4.html">
+            <div class="card">
+              <img class="card-img-top" src="img/level-4.png" alt="Imagen 4" />
+              <div class="card-body">
+                <h5 class="card-title">Nivel 4</h5>
+              </div>
+            </div>
+          </a>
+          <div class="mt-2" id="score-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Alerta de bienvenida
+      var nombreSolicitado = localStorage.getItem("nombreSolicitado");
+      var nombre = localStorage.getItem("nombre");
+      var score1 = localStorage.getItem("level-1");
+      var score2 = localStorage.getItem("level-2");
+      var score3 = localStorage.getItem("level-3");
+      var score4 = localStorage.getItem("level-4");
+
+      if (!nombreSolicitado) {
+        solicitarNombre();
+      } else if (nombre) {
+        mostrarBienvenida(nombre);
+      }
+
+      function solicitarNombre() {
+        var nombre = prompt("Bienvenido! Por favor, ingresa tu nombre:");
+        if (nombre) {
+          localStorage.setItem("nombre", nombre);
+          localStorage.setItem("nombreSolicitado", true);
+          mostrarBienvenida(nombre);
+          alert("Hola, " + nombre + "! Disfruta del juego del rompecabezas.");
+        } else {
+          solicitarNombre();
+        }
+      }
+
+      function mostrarBienvenida(nombre) {
+        var mensajeBienvenida = document.getElementById("mensaje-bienvenida");
+        if (mensajeBienvenida) {
+          mensajeBienvenida.textContent =
+            "Bienvenid@, " + nombre + "! Vamos a jugar.";
+        }
+      }
+
+      function cambiarJugador() {
+        var confirmacion = confirm(
+          "¿Estás seguro que deseas cambiar de jugador?"
+        );
+        if (confirmacion) {
+          localStorage.removeItem("nombreSolicitado");
+          localStorage.removeItem("nombre");
+          solicitarNombre();
+        }
+      }
+
+      // Temporizador
+      var tiempoInicio = Date.now();
+      window.onbeforeunload = function () {
+        var tiempoFin = Date.now();
+        var tiempoTranscurrido = (tiempoFin - tiempoInicio) / 1000;
+        alert(
+          "Tu tiempo en armar el rompecabezas fue de: " +
+            tiempoTranscurrido +
+            " segundos."
+        );
+      };
+
+      // Evento click del botón "Cambiar de jugador"
+      var botonCambiarJugador = document.getElementById("cambiar-jugador");
+      if (botonCambiarJugador) {
+        botonCambiarJugador.addEventListener("click", cambiarJugador);
+      }
+
+      //Puntaje
+      function mostrarPuntaje(nivel, puntaje) {
+        puntaje = puntaje || 0;
+        let score = document.getElementById("score-" + nivel);
+        score.innerHTML = `<strong>Puntaje máximo ${nivel}: </strong><p style="display: inline;">${puntaje}</p>s`;
+      }
+
+      mostrarPuntaje(1, score1);
+      mostrarPuntaje(2, score2);
+      mostrarPuntaje(3, score3);
+      mostrarPuntaje(4, score4);
+    </script>
+  </body>
+</html>

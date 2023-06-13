@@ -1,0 +1,215 @@
+body {
+  margin: auto;
+}
+#puzzle {
+  width: 600px;
+  margin: auto;
+  padding-top: 1%;
+}
+.tile {
+  background-image: url("/Rompecabezas/img/level-3.png");
+  width: 85px;
+  height: 85px;
+  float: left;
+  border: 1px solid silver;
+  box-sizing: border-box;
+}
+#tile1 {
+  background-position: 0 0;
+}
+#tile2 {
+  background-position: -90px 0;
+}
+#tile3 {
+  background-position: -172px 0;
+}
+#tile4 {
+  background-position: -256px 0;
+}
+#tile5 {
+  background-position: -340px 0;
+}
+#tile6 {
+  background-position: -431px 0;
+}
+#tile7 {
+  background-position: -514px 0;
+}
+#tile8 {
+  background-position: -0px -85px;
+}
+#tile9 {
+  background-position: -90px -85px;
+}
+
+#tile10 {
+  background-position: -172px -85px;
+}
+
+#tile11 {
+  background-position: -256px -85px;
+}
+
+#tile12 {
+  background-position: -340px -85px;
+}
+
+#tile13 {
+  background-position: -431px -85px;
+}
+
+#tile14 {
+  background-position: -514px -85px;
+}
+
+#tile15 {
+  background-position: -0px -170px;
+}
+
+#tile16 {
+  background-position: -90px -170px;
+}
+
+#tile17 {
+  background-position: -172px -170px;
+}
+
+#tile18 {
+  background-position: -256px -170px;
+}
+
+#tile19 {
+  background-position: -340px -170px;
+}
+
+#tile20 {
+  background-position: -431px -170px;
+}
+
+#tile21 {
+  background-position: -514px -170px;
+}
+
+#tile22 {
+  background-position: -0px -225px;
+}
+
+#tile23 {
+  background-position: -90px -225px;
+}
+
+#tile24 {
+  background-position: -172px -225px;
+}
+
+#tile25 {
+  background-position: -256px -225px;
+}
+
+#tile26 {
+  background-position: -340px -225px;
+}
+
+#tile27 {
+  background-position: -431px -225px;
+}
+
+#tile28 {
+  background-position: -514px -225px;
+}
+
+#tile29 {
+  background-position: -0px -340px;
+}
+
+#tile30 {
+  background-position: -90px -340px;
+}
+
+#tile31 {
+  background-position: -172px -340px;
+}
+
+/*  */
+
+#tile32 {
+  background-position: -256px -340px;
+}
+
+#tile33 {
+  background-position: -340px -340px;
+}
+
+#tile34 {
+  background-position: -431px -340px;
+}
+
+#tile35 {
+  background-position: -514px -340px;
+}
+
+#tile36 {
+  background-position: -0px -425px;
+}
+
+#tile37 {
+  background-position: -90px -425px;
+}
+
+#tile38 {
+  background-position: -172px -425px;
+}
+
+#tile39 {
+  background-position: -256px -425px;
+}
+
+#tile40 {
+  background-position: -340px -425px;
+}
+
+#tile41 {
+  background-position: -431px -425px;
+}
+
+#tile42 {
+  background-position: -514px -425px;
+}
+
+#tile43 {
+  background-position: -0px -510px;
+}
+
+#tile44 {
+  background-position: -90px -510px;
+}
+
+#tile45 {
+  background-position: -172px -510px;
+}
+
+#tile46 {
+  background-position: -256px -510px;
+}
+
+#tile47 {
+  background-position: -340px -510px;
+}
+
+#tile48 {
+  background-position: -431px -510px;
+}
+
+#tile49 {
+  background-position: -514px -510px;
+}
+
+#popup {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 25%;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}

@@ -1,0 +1,417 @@
+body {
+  margin: auto;
+}
+#puzzle {
+  width: 600px;
+  margin: auto;
+  padding-top: 1%;
+}
+.tile {
+  background-image: url("/Rompecabezas/img/level-4.png");
+  width: 55px;
+  height: 55px;
+  float: left;
+  border: 1px solid silver;
+  box-sizing: border-box;
+}
+#tile1 {
+  background-position: 0 0;
+}
+#tile2 {
+  background-position: -77px -0px;
+}
+#tile3 {
+  background-position: -130px -0px;
+}
+#tile4 {
+  background-position: -185px -0px;
+}
+#tile5 {
+  background-position: -240px -0px;
+}
+#tile6 {
+  background-position: -302px -0px;
+}
+#tile7 {
+  background-position: -355px -0px;
+}
+#tile8 {
+  background-position: -410px -0px;
+}
+#tile9 {
+  background-position: -465px -0px;
+}
+
+#tile10 {
+  background-position: -517px -0px;
+}
+
+#tile11 {
+  background-position: -0px -55px;
+}
+
+#tile12 {
+  background-position: -77px -55px;
+}
+
+#tile13 {
+  background-position: -130px -55px;
+}
+
+#tile14 {
+  background-position: -185px -55px;
+}
+
+#tile15 {
+  background-position: -240px -55px;
+}
+
+#tile16 {
+  background-position: -302px -55px;
+}
+
+#tile17 {
+  background-position: -355px -55px;
+}
+
+#tile18 {
+  background-position: -410px -55px;
+}
+
+#tile19 {
+  background-position: -465px -55px;
+}
+
+#tile20 {
+  background-position: -517px -55px;
+}
+
+#tile21 {
+  background-position: -0px -110px;
+}
+
+#tile22 {
+  background-position: -77px -110px;
+}
+
+#tile23 {
+  background-position: -130px -110px;
+}
+
+#tile24 {
+  background-position: -185px -110px;
+}
+
+#tile25 {
+  background-position: -240px -110px;
+}
+
+#tile26 {
+  background-position: -302px -110px;
+}
+
+#tile27 {
+  background-position: -355px -110px;
+}
+
+#tile28 {
+  background-position: -410px -110px;
+}
+
+#tile29 {
+  background-position: -465px -110px;
+}
+
+#tile30 {
+  background-position: -517px -110px;
+}
+
+#tile31 {
+  background-position: -0px -165px;
+}
+
+#tile32 {
+  background-position: -77px -165px;
+}
+
+#tile33 {
+  background-position: -130px -165px;
+}
+
+#tile34 {
+  background-position: -185px -165px;
+}
+
+#tile35 {
+  background-position: -240px -165px;
+}
+
+#tile36 {
+  background-position: -302px -165px;
+}
+
+#tile37 {
+  background-position: -355px -165px;
+}
+
+#tile38 {
+  background-position: -410px -165px;
+}
+
+#tile39 {
+  background-position: -465px -165px;
+}
+
+#tile40 {
+  background-position: -517px -165px;
+}
+
+#tile41 {
+  background-position: -0px -220px;
+}
+
+#tile42 {
+  background-position: -77px -220px;
+}
+
+#tile43 {
+  background-position: -130px -220px;
+}
+
+#tile44 {
+  background-position: -185px -220px;
+}
+
+#tile45 {
+  background-position: -240px -220px;
+}
+
+#tile46 {
+  background-position: -302px -220px;
+}
+
+#tile47 {
+  background-position: -355px -220px;
+}
+
+#tile48 {
+  background-position: -410px -220px;
+}
+
+#tile49 {
+  background-position: -465px -220px;
+}
+
+#tile50 {
+  background-position: -517px -220px;
+}
+
+#tile51 {
+  background-position: -0px -275px;
+}
+
+#tile52 {
+  background-position: -77px -275px;
+}
+
+#tile53 {
+  background-position: -130px -275px;
+}
+
+#tile54 {
+  background-position: -185px -275px;
+}
+
+#tile55 {
+  background-position: -240px -275px;
+}
+
+#tile56 {
+  background-position: -302px -275px;
+}
+
+#tile57 {
+  background-position: -355px -275px;
+}
+
+#tile58 {
+  background-position: -410px -275px;
+}
+
+#tile59 {
+  background-position: -465px -275px;
+}
+
+#tile60 {
+  background-position: -517px -275px;
+}
+
+#tile61 {
+  background-position: -0px -330px;
+}
+
+#tile62 {
+  background-position: -77px -330px;
+}
+
+#tile63 {
+  background-position: -130px -330px;
+}
+
+#tile64 {
+  background-position: -185px -330px;
+}
+
+#tile65 {
+  background-position: -240px -330px;
+}
+
+#tile66 {
+  background-position: -302px -330px;
+}
+
+#tile67 {
+  background-position: -355px -330px;
+}
+
+#tile68 {
+  background-position: -410px -330px;
+}
+
+#tile69 {
+  background-position: -465px -330px;
+}
+
+#tile70 {
+  background-position: -517px -330px;
+}
+
+#tile71 {
+  background-position: -0px -385px;
+}
+
+#tile72 {
+  background-position: -77px -385px;
+}
+
+#tile73 {
+  background-position: -130px -385px;
+}
+
+#tile74 {
+  background-position: -185px -385px;
+}
+
+#tile75 {
+  background-position: -240px -385px;
+}
+
+#tile76 {
+  background-position: -302px -385px;
+}
+
+#tile77 {
+  background-position: -355px -385px;
+}
+
+#tile78 {
+  background-position: -410px -385px;
+}
+
+#tile79 {
+  background-position: -465px -385px;
+}
+
+#tile80 {
+  background-position: -517px -385px;
+}
+
+#tile81 {
+  background-position: -0px -435px;
+}
+
+#tile82 {
+  background-position: -77px -435px;
+}
+
+#tile83 {
+  background-position: -130px -435px;
+}
+
+#tile84 {
+  background-position: -185px -435px;
+}
+
+#tile85 {
+  background-position: -240px -435px;
+}
+
+#tile86 {
+  background-position: -302px -435px;
+}
+
+#tile87 {
+  background-position: -355px -435px;
+}
+
+#tile88 {
+  background-position: -410px -435px;
+}
+
+#tile89 {
+  background-position: -465px -435px;
+}
+
+#tile90 {
+  background-position: -517px -435px;
+}
+
+#tile91 {
+  background-position: -0px -490px;
+}
+
+#tile92 {
+  background-position: -77px -490px;
+}
+
+#tile93 {
+  background-position: -130px -490px;
+}
+
+#tile94 {
+  background-position: -185px -490px;
+}
+
+#tile95 {
+  background-position: -240px -490px;
+}
+
+#tile96 {
+  background-position: -302px -490px;
+}
+
+#tile97 {
+  background-position: -355px -490px;
+}
+
+#tile98 {
+  background-position: -410px -490px;
+}
+
+#tile99 {
+  background-position: -465px -490px;
+}
+
+#tile100 {
+  background-position: -517px -490px;
+}
+
+#popup {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 25%;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}

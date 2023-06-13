@@ -1,0 +1,117 @@
+body {
+  margin: auto;
+}
+#puzzle {
+  width: 600px;
+  margin: auto;
+  padding-top: 1%;
+}
+.tile {
+  background-image: url("/Rompecabezas/img/level-2.png");
+  width: 110px;
+  height: 110px;
+  float: left;
+  border: 1px solid silver;
+  box-sizing: border-box;
+}
+#tile1 {
+  background-position: 0 0;
+}
+#tile2 {
+  background-position: -110px -0px;
+}
+#tile3 {
+  background-position: -223px -0px;
+}
+#tile4 {
+  background-position: -332px -0px;
+}
+#tile5 {
+  background-position: -442px -0px;
+}
+#tile6 {
+  background-position: 0px -110px;
+}
+#tile7 {
+  background-position: -110px -110px;
+}
+#tile8 {
+  background-position: -223px -110px;
+}
+#tile9 {
+  background-position: -332px -110px;
+}
+#tile10 {
+  background-position: -442px -110px;
+}
+
+#tile11 {
+  background-position: 0 -220px;
+}
+
+#tile12 {
+  background-position: -110px -220px;
+}
+
+#tile13 {
+  background-position: -223px -220px;
+}
+
+#tile14 {
+  background-position: -332px -220px;
+}
+
+#tile15 {
+  background-position: -442px -220px;
+}
+
+#tile16 {
+  background-position: 0 -330px;
+}
+
+#tile17 {
+  background-position: -110px -330px;
+}
+
+#tile18 {
+  background-position: -223px -330px;
+}
+
+#tile19 {
+  background-position: -332px -330px;
+}
+
+#tile20 {
+  background-position: -442px -330px;
+}
+
+#tile21 {
+  background-position: -0px -440px;
+}
+
+#tile22 {
+  background-position: -110px -440px;
+}
+
+#tile23 {
+  background-position: -223px -440px;
+}
+
+#tile24 {
+  background-position: -332px -440px;
+}
+
+#tile25 {
+  background-position: -442px -440px;
+}
+
+
+#popup {
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 25%;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}

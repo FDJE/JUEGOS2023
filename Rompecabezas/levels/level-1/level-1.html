@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nivel 1</title>
+    <link rel="stylesheet" href="/Rompecabezas/jquery/jquery-ui.css" />
+    <link rel="stylesheet" href="/Rompecabezas/levels/level-1/style-1.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-10">
+        <div id="puzzle" class="sortable">
+          <div id="tile1" class="tile"></div>
+          <div id="tile2" class="tile"></div>
+          <div id="tile3" class="tile"></div>
+          <div id="tile4" class="tile"></div>
+          <div id="tile5" class="tile"></div>
+          <div id="tile6" class="tile"></div>
+          <div id="tile7" class="tile"></div>
+          <div id="tile8" class="tile"></div>
+          <div id="tile9" class="tile"></div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="card-body">
+          <h5 class="card-title">Menú</h5>
+          <h1 id="timer"></h1>
+          <button id="reload" class="btn btn-primary w-100">
+            Reiniciar juego
+          </button>
+          <a href="/Rompecabezas/index.html">
+            <button class="btn btn-outline-danger mt-2 w-100">Regresar</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="popup" style="display: block">
+      <br /><br />
+      <button
+        id="startBtn"
+        class="btn btn-success btn-lg btn-rounded"
+        style="display: inline"
+        onclick="shuffle()"
+      >
+        Iniciar nivel 3X3
+      </button>
+      <div id="message"></div>
+      <br /><br />
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="/Rompecabezas/jquery/jquery.min.js"></script>
+    <script src="/Rompecabezas/jquery/jquery-ui.js"></script>
+    <script src="/Rompecabezas/levels/level-1/script-1.js"></script>
+  </body>
+</html>
