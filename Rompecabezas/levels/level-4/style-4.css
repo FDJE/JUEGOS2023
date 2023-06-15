@@ -7,7 +7,7 @@ body {
   padding-top: 1%;
 }
 .tile {
-  background-image: url("/img/level-4.png");
+  background-image: url("../../img/level-4.png");
   width: 55px;
   height: 55px;
   float: left;
